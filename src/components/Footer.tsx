@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Github, Twitter, Linkedin } from 'lucide-react';
+import { Mail, GitHub, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const handleContact = () => {
@@ -26,7 +26,7 @@ const Footer = () => {
           </button>
           
           <div className="flex justify-center gap-6 mb-8">
-            {[Github, Twitter, Linkedin].map((Icon, index) => (
+            {[GitHub, Twitter, Linkedin].map((Icon, index) => (
               <div 
                 key={index} 
                 className="w-10 h-10 rounded-full bg-white/80 flex items-center justify-center text-freorva-700 hover:text-freorva-900 hover:bg-white transition-all cursor-pointer shadow-sm"
