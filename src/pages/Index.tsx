@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
+import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -37,10 +38,12 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white text-freorva-900 overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-b from-white via-freorva-50 to-white text-freorva-900 overflow-hidden">
+      <div className="fixed inset-0 bg-pattern opacity-5 pointer-events-none"></div>
       <Navbar />
       <Hero />
       <Features />
+      <Testimonials />
       <Footer />
     </main>
   );
