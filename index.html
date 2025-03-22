@@ -146,9 +146,46 @@
         stroke-linejoin: round;
         fill: none;
       }
+
+      /* Support link on homepage */
+      .support-link {
+        position: fixed;
+        top: 1.5rem;
+        right: 2rem;
+        color: #5a6379;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 9999px;
+        box-shadow: 0 2px 6px rgba(90, 99, 121, 0.1);
+        transition: all 0.3s;
+        z-index: 10;
+      }
+      
+      .support-link:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(90, 99, 121, 0.15);
+      }
+      
+      /* Support icon */
+      .support-icon {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
     </style>
   </head>
   <body>
+    <div id="root"></div>
     <div class="bg-pattern"></div>
     <div class="decorative-circle-1"></div>
     <div class="decorative-circle-2"></div>
@@ -166,8 +203,19 @@
       <span>Contact Us</span>
     </button>
     
+    <a href="/support" class="support-link">
+      <svg class="support-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+      </svg>
+      <span>Support</span>
+    </a>
+    
     <footer>
       © <script>document.write(new Date().getFullYear())</script> Freorva LLC. All rights reserved.
     </footer>
+
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
