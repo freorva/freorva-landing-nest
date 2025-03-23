@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,37 +33,23 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-          <Link to="/" className="text-xl font-bold tracking-tight text-freorva-900 transition-colors duration-200">
+          <a href="/" className="text-xl font-bold tracking-tight text-freorva-900 transition-colors duration-200">
             Freorva
-          </Link>
+          </a>
         </div>
         
-        <div className="flex items-center gap-4">
-          <Link 
-            to="/support" 
-            className={cn(
-              "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
-              scrolled 
-                ? "bg-freorva-100 text-freorva-800 hover:bg-freorva-200" 
-                : "bg-white/80 backdrop-blur-md text-freorva-800 hover:bg-white shadow-sm"
-            )}
-          >
-            Support
-          </Link>
-          
-          <button 
-            onClick={handleContact}
-            className={cn(
-              "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
-              scrolled 
-                ? "bg-freorva-800 text-white hover:bg-freorva-900" 
-                : "bg-white/80 backdrop-blur-md text-freorva-800 hover:bg-white shadow-sm"
-            )}
-          >
-            <Mail size={16} />
-            <span>Contact Us</span>
-          </button>
-        </div>
+        <button 
+          onClick={handleContact}
+          className={cn(
+            "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-in-out",
+            scrolled 
+              ? "bg-freorva-800 text-white hover:bg-freorva-900" 
+              : "bg-white/80 backdrop-blur-md text-freorva-800 hover:bg-white shadow-sm"
+          )}
+        >
+          <Mail size={16} />
+          <span>Contact Us</span>
+        </button>
       </div>
     </header>
   );
