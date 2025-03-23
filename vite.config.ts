@@ -20,5 +20,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: './', // Add this line for proper asset path resolution
+  base: './', // Ensures proper asset path resolution for deployment
 }));
